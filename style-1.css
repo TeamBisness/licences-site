@@ -1,0 +1,35 @@
+:root{--papier:#F6F6F3;--encre:#14181F;--vert:#0B6B4F;--rouge:#C2321F;--gris:#5F6672;--trait:#D8D9D3}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--papier);color:var(--encre);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:84px}
+main,header,footer{max-width:640px;margin:0 auto;padding:0 20px}
+h1,h2{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(30px,8.5vw,44px);margin:28px 0 14px}
+h2{font-size:25px;margin:44px 0 12px}
+p{margin:0 0 12px;max-width:62ch}
+.sub{font-size:19px;color:var(--gris)}
+.brand{padding-top:18px;font-weight:700}
+.btn{display:block;text-align:center;background:var(--vert);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:16px 20px;border-radius:6px;min-height:52px}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--encre);outline-offset:2px}
+.note{font-size:14px;color:var(--gris);text-align:center;margin-top:8px}
+.ledger{width:100%;border-collapse:collapse;margin:22px 0 4px;font-size:15px}
+.ledger th{font-weight:600;text-align:left;color:var(--gris);padding:6px 0;border-bottom:2px solid var(--encre)}
+.ledger td{padding:9px 0;border-bottom:1px solid var(--trait);vertical-align:top}
+.ledger .n{text-align:right;font-family:ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;white-space:nowrap;padding-left:10px}
+.ledger .perte{color:var(--rouge);font-weight:700}
+.ledger tfoot td{border-bottom:0;font-weight:700;padding-top:12px}
+.cap{font-size:13px;color:var(--gris)}
+.ok{color:var(--vert);font-weight:700}
+ul.l{padding-left:20px}ul.l li{margin-bottom:8px}
+.garantie{border:2px solid var(--vert);border-radius:6px;padding:16px 18px;margin:28px 0}
+.garantie strong{color:var(--vert)}
+details{border-bottom:1px solid var(--trait);padding:12px 0}
+summary{font-weight:700;cursor:pointer;min-height:28px}
+details p{margin-top:8px}
+footer{padding-top:36px;padding-bottom:20px;font-size:14px;color:var(--gris)}
+footer a{color:var(--gris);margin-right:14px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--papier);border-top:1px solid var(--trait);padding:10px 20px calc(10px + env(safe-area-inset-bottom))}
+.bar .btn{max-width:600px;margin:0 auto}
+.legal h1{font-size:30px}.legal h2{font-size:20px;margin-top:28px}
+@media(prefers-reduced-motion:no-preference){.ledger tr{animation:in .4s both}.ledger tr:nth-child(2){animation-delay:.1s}.ledger tr:nth-child(3){animation-delay:.2s}}
+@keyframes in{from{opacity:0}to{opacity:1}}
